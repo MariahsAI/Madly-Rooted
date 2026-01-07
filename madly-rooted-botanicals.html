@@ -130,9 +130,10 @@
         @keyframes scrollPulse { 0%, 100% { transform: scaleY(1); opacity: 1; } 50% { transform: scaleY(0.5); opacity: 0.5; } }
         
         /* Philosophy Section */
-        .philosophy { padding: 10rem 4rem; background: var(--burgundy-deep); position: relative; overflow: hidden; }
-        .philosophy::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 200px; background: linear-gradient(to bottom, var(--cream), transparent); opacity: 0.1; }
-        .philosophy-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+        .philosophy { padding: 10rem 4rem; background: url('philosophy-bg.jpg') center center / cover no-repeat; position: relative; overflow: hidden; }
+        .philosophy::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(74, 14, 14, 0.92) 0%, rgba(114, 47, 55, 0.88) 100%); }
+        .philosophy::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 200px; background: linear-gradient(to bottom, var(--cream), transparent); opacity: 0.1; }
+        .philosophy-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; position: relative; z-index: 1; }
         .philosophy-content { color: var(--cream); }
         .section-tag { font-size: 0.75rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem; }
         .section-tag::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
